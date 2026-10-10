@@ -1,0 +1,9 @@
+# Secrets
+.env
+
+# Python virtual environment
+venv/
+
+# Agent outputs and grading logs
+results/
+logs/
