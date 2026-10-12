@@ -14,8 +14,14 @@ Setup: mini-swe-agent 2.4.6, `gpt-4o-2024-11-20`, temperature 0.0, step limit 50
 | Task | Resolved | Steps | Notes |
 |---|---|---|---|
 | `sympy__sympy-15599` | No | 50 (limit hit) | No patch submitted. Est. cost about $0.67. |
+| `pallets__flask-5014` | **Yes** | 11 | Est. cost about $0.11. |
+| `psf__requests-1142` | No | 50 (limit hit) | No patch submitted. Est. cost about $1.04. |
+| `django__django-10097` | No | 50 (limit hit) | No patch submitted. Est. cost about $0.92. The gold patch also fails here (environment issue). |
+| `pytest-dev__pytest-10081` | No | 15 | Patch fixed the target test but broke an existing one. Est. cost about $0.17. |
+| `scikit-learn__scikit-learn-13439` | No | 50 (limit hit) | No patch submitted. Est. cost about $1.21. |
+| `astropy__astropy-14309` | **Yes** | 9 | Est. cost about $0.08. |
 
-**Score: 0 / 1.** The grader itself was checked: the official gold patch for this task passes (FAIL_TO_PASS 1/1, PASS_TO_PASS 80/80). See [results.md](results.md) for details.
+**Score: 2 / 7 (29%)**, est. cost $4.20 in total. All four runs that hit the step limit got stuck repeating the same few commands after a broken `sed`/`echo` edit. The grader was checked by grading the official gold patches for the empty-patch tasks: they pass, except for `django__django-10097`, which this Docker image can't pass at all. See [results.md](results.md) for details.
 
 ## Requirements
 

@@ -2,8 +2,10 @@
 # Lines starting with "#" are ignored.
 sympy__sympy-15599
 
-# Ideas: tasks rated "<15 min fix" from other repos (uncomment to use):
-# pallets__flask-5014
-# psf__requests-1142
-# django__django-10097
-# pytest-dev__pytest-10081
+# Batch 2: tasks rated "<15 min fix", one per repo
+pallets__flask-5014
+psf__requests-1142
+django__django-10097
+pytest-dev__pytest-10081
+scikit-learn__scikit-learn-13439
+astropy__astropy-14309
